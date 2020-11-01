@@ -1,0 +1,21 @@
+.footer {
+  padding: 60px 0;
+
+  background-color: $footer-bgc;
+
+  &__container {
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    color: $footer-logo-color;
+  }
+}
+
+@import "../components/footer-address";
+@import "../components/footer-social-links";
+@import "../components/footer-subscr";

@@ -1,0 +1,18 @@
+.header {
+  padding: 30px 0;
+
+  border-bottom: 1px solid $header-border;
+
+  &__logo {
+    animation-duration: 1500ms;
+
+    margin-right: 93px;
+  }
+
+  &.index {
+    border-style: none;
+  }
+}
+
+@import "../components/navigation-list";
+@import "../components/header-address";
