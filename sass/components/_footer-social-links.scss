@@ -1,6 +1,25 @@
 .footer-socials {
+  margin-bottom: 60px;
+
+  @media screen and (max-width: 1119px) {
+    text-align: center;
+  }
+
+  @include for-size(tablet-only) {
+    width: calc(100% / 2);
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 0;
+  }
+
   &__banner {
     @extend %banner;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center; //for mobile & tablet only
   }
 
   &__item:not(:last-child) {

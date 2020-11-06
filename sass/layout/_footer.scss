@@ -4,12 +4,22 @@
   background-color: $footer-bgc;
 
   &__container {
-    align-items: baseline;
-    justify-content: space-between;
+    @include for-size(tablet) {
+      display: flex;
+    }
+
+    @include for-size(tablet-only) {
+      flex-wrap: wrap;
+    }
+
+    @include for-size(desktop) {
+      align-items: baseline;
+      justify-content: space-between;
+    }
   }
 
   &__logo {
-    display: inline-block;
+    display: block;
     margin-bottom: 20px;
 
     color: $footer-logo-color;

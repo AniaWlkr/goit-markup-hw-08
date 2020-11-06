@@ -1,12 +1,23 @@
 .header {
-  padding: 30px 0;
+  position: relative;
+  padding: 10px 0;
+
+  @include for-size(tablet) {
+    padding: 21px 0;
+  }
+
+  @include for-size(desktop) {
+    padding: 25 px 0;
+  }
 
   border-bottom: 1px solid $header-border;
 
   &__logo {
     animation-duration: 1500ms;
 
-    margin-right: 93px;
+    @include for-size(tablet) {
+      margin-right: 93px;
+    }
   }
 
   &.index {
@@ -14,5 +25,15 @@
   }
 }
 
+.navigation {
+  display: flex;
+  align-items: center;
+
+  @include for-size(mobile-only) {
+    justify-content: space-between;
+  }
+}
+
+@import "../components/menu";
 @import "../components/navigation-list";
 @import "../components/header-address";

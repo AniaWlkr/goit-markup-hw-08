@@ -2,18 +2,8 @@
   display: inline-block;
   margin-bottom: 20px;
 
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.03em;
+  @include font(700, 14px, 16px, 0.03em);
   text-transform: uppercase;
 
   color: $footer-logo-color;
-}
-
-%header-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
 }

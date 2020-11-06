@@ -9,6 +9,8 @@
   background-color: rgba(0, 0, 0, 0.2);
   transition: all 500ms linear;
 
+  overflow-y: scroll;
+
   &.is-hidden {
     opacity: 0;
     visibility: hidden;
@@ -23,15 +25,21 @@
   top: 50%;
   left: 50%;
 
-  transform: translate(-50%, -50%) scale(1);
-
-  width: 528px;
-  height: 581px;
-
+  margin: auto;
   padding: 40px;
 
+  width: 450px;
+  height: 609px;
+
+  @include for-size(desktop) {
+    width: 528px;
+    height: 581px;
+  }
+
+  border-radius: 4px;
   background-color: #fff;
 
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 1000ms ease-in-out 500ms;
 
   &__btn {
@@ -46,13 +54,16 @@
     border-radius: 50%;
     cursor: pointer;
 
+    display: flex;
     align-items: center;
     justify-content: center;
+
+    // z-index: 60;
   }
 
-  &_icon {
-    width: 18px;
-    height: 18px;
+  &__icon {
+    width: 17px;
+    height: 17px;
   }
 
   .backdrop.is-hidden & {
